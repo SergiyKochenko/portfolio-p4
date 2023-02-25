@@ -17,7 +17,10 @@
         integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<style>
+  
+</style>
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -26,8 +29,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">C<span class="red-o">o</span>mp<span class="pink-a">a</span>ny<span
+                        class="thin">logo</span></span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,19 +81,80 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <section style="background-color: #f8f9fa;"></section>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3 style="color:white;">C<span class="red-o">o</span>mp<span class="pink-a">a</span>ny<span class="thin">logo</span></h3>
+
+
+
+            
+            <p class="footer-links">
+                <a href="{% url 'home' %}" class="link-1">Home</a>
+                
+                <a href="#">Blog</a>
+            
+                <a href="#">Pricing</a>
+            
+                <a href="#">About</a>
+                
+                <a href="#">Faq</a>
+                
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">
+                Copyright &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Company Name. All rights reserved.</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <a href="https://goo.gl/maps/wLM43JBwRp5Bwvhu8" target="_blank"><i class="fa fa-map-marker"></i></a>
+                <a href="https://goo.gl/maps/wLM43JBwRp5Bwvhu8" target="_blank"><p><span>444 S. Cedros Ave</span> Solana Beach, California</p></a>
+            </div>
+
+            <div>
+                <a href=”tel:+19998887766”><i class="fa fa-phone"></i></a>
+                <p><span>
+                    <a href=”tel:+19998887766”>+1(999)888-77-66</a>
+                    </span></p>
+            </div>
+
+            <div>
+                <a href="mailto:sergiykochenko@gmail.com"><i class="fa fa-envelope"></i></a>
+                <p><a href="mailto:sergiykochenko@gmail.com">support@company.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/sergiy-kochenko-a93a30135/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/SergiyKochenko/portfolio-p4" target="_blank"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
     </footer>
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
             let alert = new bootstrap.Alert(messages);
             alert.close();
-        }, 2000);
+        }, 3000);
     </script>
 </body>
 

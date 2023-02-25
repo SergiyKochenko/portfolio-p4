@@ -13,8 +13,13 @@ body {
     color: #E84610;
 }
 
+.pink-a {
+    color: hsl(298, 97%, 49%);
+}
 .thin {
-    font-weight: 300;
+    font-weight: 400;
+    color:  lightseagreen;
+    text-decoration: none;
 }
 
 .light-bg {
