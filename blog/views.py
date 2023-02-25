@@ -6,15 +6,6 @@ from .forms import CommentForm
 
 
 
-def about_page(request):
-    """
-    View for about page.
-    """
-    return render(request, 'about_page.html')
-
-
-
-
 
 class PostList(generic.ListView):
     model = Post
