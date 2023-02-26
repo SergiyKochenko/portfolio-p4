@@ -18,6 +18,7 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
 <style>
   
 </style>
@@ -39,6 +40,10 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
 
                     {% if user.is_authenticated %}
@@ -82,7 +87,7 @@
     </main>
 
     <!-- Footer -->
-    <section style="background-color: #f8f9fa;"></section>
+    <section style="background-color: #f8f9fa;">test</section>
     <footer class="footer-distributed">
 
         <div class="footer-left">
@@ -97,13 +102,13 @@
                 
                 <a href="#">Blog</a>
             
-                <a href="#">Pricing</a>
+                <a href="{% url 'pricing' %}">Pricing</a>
             
-                <a href="#">About</a>
+                <a href="{% url 'about' %}">About</a>
                 
                 <a href="#">Faq</a>
                 
-                <a href="#">Contact</a>
+                <a href="{% url 'contact' %}">Contact</a>
             </p>
 
             <p class="footer-company-name">

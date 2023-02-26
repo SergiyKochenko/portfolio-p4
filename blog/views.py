@@ -6,6 +6,26 @@ from .forms import CommentForm
 
 
 
+def about_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    return render(request, 'about.html')
+
+def pricing_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    return render(request, 'pricing.html')
+
+def contact_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    return render(request, 'contact.html')
+
+
+
 
 class PostList(generic.ListView):
     model = Post
