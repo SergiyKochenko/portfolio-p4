@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
     <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 <style>
   
 </style>
@@ -30,8 +31,8 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">C<span class="red-o">o</span>mp<span class="pink-a">a</span>ny<span
-                        class="thin">logo</span></span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand text-font" style="color:white;">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span
+                        class="thin text-font">logo</span></span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -39,30 +40,40 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link {% if request.path == '/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
+                        <a class="nav-link {% if request.path == '/gallery/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/pricing/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'pricing' %}">Pricing</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/contact/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'contact' %}">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link {% if request.path == '/about/' %}active{% endif %} butn text-font" aria-current="page" href="{% url 'about' %}">About</a>
                     </li>
 
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link {% if request.path == '/account_logout/' %}active{% endif %} butn text-font" href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link {% if request.path == '/account_signup/' %}active{% endif %} butn text-font" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                        <a class="nav-link {% if request.path == '/account_login/' %}active{% endif %} butn text-font" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
 
                 </ul>
-                <span class="navbar-text text-muted">
-                    adventures of a software developer
-                </span>
+
             </div>
         </div>
     </nav>
@@ -83,6 +94,7 @@
 
         {% block content %}
         <!-- Content Goes here -->
+
         {% endblock content %}
     </main>
 
@@ -92,7 +104,7 @@
 
         <div class="footer-left">
 
-            <h3 style="color:white;">C<span class="red-o">o</span>mp<span class="pink-a">a</span>ny<span class="thin">logo</span></h3>
+            <h3 class="text-font" style="color:white;"><span class="text-font">C<span class="red-o text-font">o</span>mp<span class="pink-a text-font">a</span>ny<span class="thin text-font">logo</span></span></h3>
 
 
 
@@ -118,20 +130,26 @@
         <div class="footer-center">
 
             <div>
-                <a href="https://goo.gl/maps/wLM43JBwRp5Bwvhu8" target="_blank"><i class="fa fa-map-marker"></i></a>
-                <a href="https://goo.gl/maps/wLM43JBwRp5Bwvhu8" target="_blank"><p><span>444 S. Cedros Ave</span> Solana Beach, California</p></a>
+                <a>
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+                <a href="https://goo.gl/maps/taq2R6KVoNtFX13A7" target="_blank"><p><span>Tralee, Kerry College, Monavally,</span> Co. Kerry, Ireland, V92 PW50</p></a>
             </div>
 
             <div>
-                <a href=”tel:+19998887766”><i class="fa fa-phone"></i></a>
-                <p><span>
-                    <a href=”tel:+19998887766”>+1(999)888-77-66</a>
-                    </span></p>
+                <a>
+                    <a>
+                        <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                    </a>
+            <a class="thin" href="tel:+3530667149600">(066)-714-9600</a>
+                </a>
             </div>
 
             <div>
-                <a href="mailto:sergiykochenko@gmail.com"><i class="fa fa-envelope"></i></a>
-                <p><a href="mailto:sergiykochenko@gmail.com">support@company.com</a></p>
+                <a>
+                    <i class="fa fa-envelope"></i>
+                </a>
+                <a class="thin" href="mailto:sergiykochenko@gmail.com">support@company.com</a>
             </div>
 
         </div>

@@ -24,7 +24,17 @@ def contact_page(request):
     """
     return render(request, 'contact.html')
 
+def gallery_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    return render(request, 'gallery.html')
 
+def contact_page(request):
+    """
+    This view renders to the user the about page.
+    """
+    return render(request, 'contact.html')
 
 
 class PostList(generic.ListView):

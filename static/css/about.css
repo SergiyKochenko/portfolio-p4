@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,900;1,100;1,200&family=Permanent+Marker&family=Play:wght@400;700&family=Shadows+Into+Light+Two&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Merienda+One|Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
 
 /* ABOUT PAGE */
 .about-page {
@@ -8,7 +9,7 @@
 }
 
 .about-image {
-    height: 600px;
+    height: 350px;
     margin: 0 auto;
     contain: content;
 }
@@ -17,7 +18,7 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: -28px;
+    top: 40px;
 }
 
 .about-page h2 {
@@ -35,5 +36,5 @@
 }
 
 #statement-green {
-    color: green;
+    color: rgb(99, 34, 45);
 }
