@@ -32,7 +32,7 @@ DEBUG = False
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
-ALLOWED_HOSTS = ["app-project-foure.herokuapp.com/", "localhost"]
+ALLOWED_HOSTS = ["app-project-foure.herokuapp.com", "localhost"]
 
 
 # Application definition
